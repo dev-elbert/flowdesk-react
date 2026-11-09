@@ -61,6 +61,7 @@ npm run dev        # abre em http://localhost:5173/flowdesk-react/
 | Comando | O que faz |
 | --- | --- |
 | `npm run dev` | Servidor de desenvolvimento com recarga automática |
+| `npm run dev:celular` | O mesmo, aberto para a rede: o celular no mesmo Wi-Fi acessa pelo endereço "Network" que aparece no terminal |
 | `npm test` | Roda os testes (Vitest) |
 | `npm run typecheck` | Confere os tipos do TypeScript |
 | `npm run build` | Gera a versão de produção em `dist/` |
