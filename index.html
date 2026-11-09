@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="FlowDesk: painel de gestão de chamados em React e TypeScript, com quadro kanban, gráficos e instalação como app." />
+  <meta property="og:title" content="FlowDesk | Gestão inteligente de chamados" />
+  <meta property="og:description" content="Lista, quadro kanban arrastável, gráficos, histórico por chamado e tema claro/escuro." />
+  <meta property="og:type" content="website" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="FlowDesk" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+  <title>FlowDesk | Gestão inteligente de chamados</title>
+  <script>
+    // Aplica o tema antes de desenhar a página, para não piscar o tema errado.
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem('flowdesk_theme'); } catch (error) {}
+      if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+</head>
+<body>
+  <noscript><p style="padding:16px;text-align:center">O FlowDesk precisa de JavaScript ativado para funcionar.</p></noscript>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
